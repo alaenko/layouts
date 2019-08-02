@@ -16,7 +16,12 @@ function ShopItem(props) {
 }
 
 ShopItem.propTypes = {
-  item: PropTypes.object.isRequired
+  item: PropTypes.shape({
+    name: PropTypes.string,
+    price: PropTypes.string,
+    color: PropTypes.string,
+    img: PropTypes.string
+  }).isRequired
 }
 
 export default ShopItem
